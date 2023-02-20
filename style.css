@@ -1,0 +1,37 @@
+#instrucciones{
+    text-align: left;
+}
+
+h1{
+    display: inline;
+}
+
+#botones_de_instrucciones{
+    float: right;
+    color: red;
+    background-color: lime;
+}
+
+#mario{
+    width: 100%;
+}
+
+#mario_pug{
+    background-color: red;
+    color: cyan;
+    font-size: large;
+}
+
+h3{
+    color: brown;
+    background-color: black;
+    
+}
+
+.imagenes{
+    width: 50%;
+}
+
+vista_de_camara{
+    background: url("game_console.png");
+}
