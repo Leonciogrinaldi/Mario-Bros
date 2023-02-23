@@ -32,6 +32,12 @@ h3{
     width: 50%;
 }
 
-vista_de_camara{
+#controles{
     background: url("game_console.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#canvas{
+    background-color: darkblue;
 }

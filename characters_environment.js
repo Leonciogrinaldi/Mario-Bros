@@ -72,7 +72,7 @@ function game(){
     fill(255, 255, 255);
     textSize(40);
     textAlign(CENTER);
-    text("Presiona cualquier flecha del teclado para iniciar el juego", gameConfig.screenX/2, gameConfig.screenY/2);
+    text("Presiona presiona el boton START para iniciar el juego", gameConfig.screenX/2, gameConfig.screenY/2);
     textSize(40);
 
     stroke(255);
@@ -115,16 +115,23 @@ function game(){
   }
 }  
 
-function startGame()
-{
-  GameStatus = "start";
-  document.getElementById("status").innerHTML = "El juego está cargando";
+var noseX="";
+var noseY="";
+
+function iniciar(){
+  GameStatus="start";
+  document.getElementById("cargado").innerHTML="El juego está cargando";
+}
+
+function game(){
+  console.log("noseX"+noseX);
+  console.log("noseY"+noseY);
 }
 
 // Cambiar el estado del juego si se presiona cualquier tecla
 function changeGameStatud(character){
- if(noseX !="" && gameConfig.status==="start" && GameStatus=="start") { 
-   document.getElementById("status").innerHTML = "El juego se ha cargado";
+ if(GameStatus=="start" && gameConfig.status==="start" && GameStatus=="start") { 
+   document.getElementById("cargando").innerHTML="El juego se ha cargado";
    world_start.play();
  initializeCharacterStatus(mario)
     gameConfig.status= "play"

@@ -7,10 +7,11 @@ function preload() {
 function setup() {
 	canvas = createCanvas(1240,336);
 	instializeInSetup(mario);
-	vista_de_camara=createCapture(VIDEO);
-	vista_de_camara.size(500,500);
-	vista_de_camara.parent("controles");
-	red_neuronal=ml5.poseNet(vista_de_camara, cargado);
+	canvas.parent("canvas");
+	camara=createCapture(VIDEO);
+	camara.size(500,500);
+	camara.parent("controles");
+	red_neuronal=ml5.poseNet(camara, cargado);
     red_neuronal.on("pose", resultados);
 }
 
@@ -29,7 +30,7 @@ function resultados(results){
 }
 
 function draw() {
-	game()
+	game();
 }
 
 
